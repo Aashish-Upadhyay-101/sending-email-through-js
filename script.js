@@ -43,15 +43,16 @@ const sendEmail = async (options) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
-
+    
+    // both these user and pass should be your original email and password from which you want to send an email
     auth: {
-      user: "aashish.upadhyay98651@gmail.com",
-      pass: "Newnepal#12345",
+      user: "<email>",
+      pass: "<password>",
     },
   });
 
   const mailOptions = {
-    from: "Tocord <aashish.upadhyay98651@gmail.com>",
+    from: "<Your Email>",
     to: options.email,
     subject: options.subject,
     text: options.text,
